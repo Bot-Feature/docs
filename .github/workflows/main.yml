@@ -1,0 +1,15 @@
+name: Trigger Netlify Deployment
+on:
+  schedule:
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Deploy Netlify Site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl request
+        env:
+          DEPLOY_HOOK: ${{ secrets.DEPLOY_HOOK }}
+        run: curl -X POST -d {} $DEPLOY_HOOK
