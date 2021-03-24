@@ -64,9 +64,6 @@ echo "[[rule]]
         ip = [ \"127.0.0.1\", \"::1\" ]
 
         \"+\" = \"*\"" > /opt/TS3AudioBot/TS3AudioBot/bin/Release/netcoreapp3.1/rights.toml
-
-# 
-
 ```
 
 ## 4. Configure the service of the bot
